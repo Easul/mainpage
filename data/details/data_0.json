@@ -104,5 +104,22 @@
             "siteUrl": "https://blog.csdn.net/wwb1234560",
             "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/csdn.png"
         }]
+    },{
+        "id": 4,
+        "className": "\u7f16\u7a0b",
+        "description": "\u7f16\u7a0b",
+        "siteVos": [{
+            "id": 1,
+            "siteName": "CloudStudio",
+            "description": "CloudStudio",
+            "siteUrl": "https://cloudstudio.net/",
+            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/cloudstudio.png"
+        },{
+            "id": 2,
+            "siteName": "CodeServer",
+            "description": "CodeServer",
+            "siteUrl": "https://codeserver.lightly.ml/",
+            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/codeserver.png"
+        }]
     }]
 }
