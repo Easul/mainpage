@@ -1243,7 +1243,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             }))
         },
         applyBGImg: function(a, b) {
-            $(document.body).css("background-image", "url(images/BackGround/image/" + a + ".png)"),
+            $(document.body).css("background-image", "url(https://cdn.jsdelivr.net/gh/Easul/mainpage/images/BackGround/image/" + a + ".png)"),
             $(document.getElementById("bg-iframe")).remove();
             b && b();
         },
