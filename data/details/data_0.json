@@ -90,7 +90,7 @@
             "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/meituxiuxiu.png"
         }, {
             "id": 4,
-            "siteName": "f\u641c",
+            "siteName": "F\u641c",
             "siteUrl": "https://fsou.cc/",
             "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/fsou.png"
         }, {
@@ -100,9 +100,9 @@
             "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/baidufanyi.png"
         }, {
             "id": 6,
-            "siteName": "kinhdown",
-            "siteUrl": "https://kinhdown.com/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/kinhdown.png"
+            "siteName": "CSDN",
+            "siteUrl": "https://blog.csdn.net/wwb1234560",
+            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/csdn.png"
         }]
     }]
 }
