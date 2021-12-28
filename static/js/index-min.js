@@ -1678,7 +1678,7 @@ $(function() {
     var f = MyLocalStore.getNavBgId();
     // if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) f = "105";
     if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) {
-        $.isEmptyObject(f) || $(document.body).css("background-image", "url('static/img/background.jpg')");
+        $.isEmptyObject(f) || $(document.body).css("background-image", "url('https://cdn.jsdelivr.net/gh/Easul/mainpage/static/img/background.jpg')");
         setTimeout(function() {
                 MyApplication.init()
             },
@@ -1687,7 +1687,7 @@ $(function() {
     }
     BGSetting.applyBGImg(f,
         function(f) {
-            $.isEmptyObject(f) || $(document.body).css("background-image", "url('" + f + "')");
+            $.isEmptyObject(f) || $(document.body).css("background-image", "url('https://cdn.jsdelivr.net/gh/Easul/mainpage/" + f + "')");
             setTimeout(function() {
                     MyApplication.init()
                 },
