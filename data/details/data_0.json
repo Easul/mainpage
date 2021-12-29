@@ -7,32 +7,32 @@
             "id": 1,
             "siteName": "\u82e5\u8f7b",
             "siteUrl": "https://www.lightly.ml",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/lightly.png"
+            "logoResourceId": "images/Site/lightly.png"
         }, {
             "id": 2,
             "siteName": "\u641e\u5b9a\u8bbe\u8ba1",
             "siteUrl": "https://ps.gaoding.com/sources/index.html#%7B%22files%22:%5B%5D,%22resources%22:%5B%5D,%22environment%22:%7B%22theme%22:1,%22lang%22:%22zh-CN%22,%22vmode%22:0,%22intro%22:true,%22localsave%22:true,%22topt%22:%7B%22t0%22:%5B1,0,0%5D%7D,%22menus%22:%5B%5B1,1,1,1,1,0,1,1,1,1,1,1,1%5D,1,1,1,1,1,1,1,1%5D%7D,%22serial_key%22:%229cf1badfd302be26%22%7D",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/ps.png"
+            "logoResourceId": "images/Site/ps.png"
         }, {
             "id": 3,
             "siteName": "\u963f\u91cc\u6302\u8f7d",
             "siteUrl": "https://sfy.musicoding.ml/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/aliyun.png"
+            "logoResourceId": "images/Site/aliyun.png"
         }, {
             "id": 4,
             "siteName": "\u7f16\u7a0b\u603b\u7ed3",
             "siteUrl": "https://easul.lightly.ml/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/bianchengzongjie.png"
+            "logoResourceId": "images/Site/bianchengzongjie.png"
         }, {
             "id": 5,
             "siteName": "\u8003\u7814\u603b\u7ed3",
             "siteUrl": "https://aboive.lightly.ml/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/kaoyanzongjie.png"
+            "logoResourceId": "images/Site/kaoyanzongjie.png"
         }, {
             "id": 6,
             "siteName": "\u6211\u7684\u6cb9\u571f",
             "siteUrl": "https://y2b.lightly.ml",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/y2b.png"
+            "logoResourceId": "images/Site/y2b.png"
         }]
     },{
         "id": 2,
@@ -42,32 +42,32 @@
             "id": 1,
             "siteName": "\u5929\u7ffc\u4e91",
             "siteUrl": "https://189.ly93.cc/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/tianyiyun.png"
+            "logoResourceId": "images/Site/tianyiyun.png"
         }, {
             "id": 2,
             "siteName": "\u767e\u5ea6\u4e91",
             "siteUrl": "https://baidu.kinh.cc/?Type=LinkParsing",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/baiduyun.png"
+            "logoResourceId": "images/Site/baiduyun.png"
         }, {
             "id": 3,
             "siteName": "\u8fc5\u96f7\u4e91",
             "siteUrl": "https://xunlei.kinh.cc/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/xunleiyun.png"
+            "logoResourceId": "images/Site/xunleiyun.png"
         }, {
             "id": 4,
             "siteName": "\u963f\u91cc\u4e91",
             "siteUrl": "https://aly.kinh.cc/?Type=LinkParsing",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/aliyun.png"
+            "logoResourceId": "images/Site/aliyun.png"
         }, {
             "id": 5,
             "siteName": "\u006d\u006f\u0074\u0072\u0069\u0078\u4e0b\u8f7d",
             "siteUrl": "https://motrix.app/zh-CN/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/motrix.png"
+            "logoResourceId": "images/Site/motrix.png"
         }, {
             "id": 6,
             "siteName": "kinhdown",
             "siteUrl": "https://kinhdown.com/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/kinhdown.png"
+            "logoResourceId": "images/Site/kinhdown.png"
         }]
     },{
         "id": 3,
@@ -77,32 +77,32 @@
             "id": 1,
             "siteName": "netcut",
             "siteUrl": "https://netcut.cn/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/netcut.png"
+            "logoResourceId": "images/Site/netcut.png"
         }, {
             "id": 2,
             "siteName": "\u5fae\u4fe1\u4f20\u8f93",
             "siteUrl": "https://filehelper.weixin.qq.com/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/weixin.png"
+            "logoResourceId": "images/Site/weixin.png"
         }, {
             "id": 3,
             "siteName": "\u7f8e\u56fe\u79c0\u79c0",
             "siteUrl": "https://pc.meitu.com/design/edit?from=icon",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/meituxiuxiu.png"
+            "logoResourceId": "images/Site/meituxiuxiu.png"
         }, {
             "id": 4,
             "siteName": "F\u641c",
             "siteUrl": "https://fsou.cc/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/fsou.png"
+            "logoResourceId": "images/Site/fsou.png"
         }, {
             "id": 5,
             "siteName": "\u767e\u5ea6\u7ffb\u8bd1",
             "siteUrl": "https://fanyi.baidu.com",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/baidufanyi.png"
+            "logoResourceId": "images/Site/baidufanyi.png"
         }, {
             "id": 6,
             "siteName": "CSDN",
             "siteUrl": "https://blog.csdn.net/wwb1234560",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/csdn.png"
+            "logoResourceId": "images/Site/csdn.png"
         }]
     },{
         "id": 4,
@@ -113,13 +113,13 @@
             "siteName": "CloudStudio",
             "description": "CloudStudio",
             "siteUrl": "https://cloudstudio.net/",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/cloudstudio.png"
+            "logoResourceId": "images/Site/cloudstudio.png"
         },{
             "id": 2,
             "siteName": "CodeServer",
             "description": "CodeServer",
             "siteUrl": "https://codeserver.musicoding.ml",
-            "logoResourceId": "https://cdn.jsdelivr.net/gh/Easul/mainpage/images/Site/codeserver.png"
+            "logoResourceId": "images/Site/codeserver.png"
         }]
     }]
 }

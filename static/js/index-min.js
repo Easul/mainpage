@@ -1243,7 +1243,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             }))
         },
         applyBGImg: function(a, b) {
-            $(document.body).css("background-image", "url('https://cdn.jsdelivr.net/gh/Easul/mainpage/images/BackGround/image/" + a + ".png')"),
+            $(document.body).css("background-image", "url('images/BackGround/image/" + a + ".png')"),
             $(document.getElementById("bg-iframe")).remove();
             b && b();
         },
@@ -1678,7 +1678,7 @@ $(function() {
     var f = MyLocalStore.getNavBgId();
     // if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) f = "105";
     if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) {
-        $.isEmptyObject(f) || $(document.body).css("background-image", "url('https://cdn.jsdelivr.net/gh/Easul/mainpage/static/img/background.jpg')");
+        $.isEmptyObject(f) || $(document.body).css("background-image", "url('static/img/background.jpg')");
         setTimeout(function() {
                 MyApplication.init()
             },
@@ -1687,7 +1687,7 @@ $(function() {
     }
     BGSetting.applyBGImg(f,
         function(f) {
-            $.isEmptyObject(f) || $(document.body).css("background-image", "url('https://cdn.jsdelivr.net/gh/Easul/mainpage/" + f + "')");
+            $.isEmptyObject(f) || $(document.body).css("background-image", "url('" + f + "')");
             setTimeout(function() {
                     MyApplication.init()
                 },
