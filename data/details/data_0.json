@@ -130,6 +130,11 @@
             "siteName": "CSDN",
             "siteUrl": "https://blog.csdn.net/wwb1234560",
             "logoResourceId": "images/Site/csdn.png"
+        }, {
+            "id": 5,
+            "siteName": "Codeserver",
+            "siteUrl": "https://codeserver.lightly.ml/",
+            "logoResourceId": "images/Site/codeserver.png"
         }]
     }]
 }
