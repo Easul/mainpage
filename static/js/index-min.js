@@ -1,80 +1,6 @@
 (function(f, h) {
     var a = {};
     $.extend(!0, a, {
-        weatherAnimationView: null,
-        isShowWeatherAnimationView: function(a) {
-            return ! 0
-        },
-        clearWeatherAnimation: function(e) {
-            var c = {
-                callback: e
-            };
-            $.isEmptyObject(a.weatherAnimationView) || a.weatherAnimationView.fadeOut(1E3,
-            function() {
-                a.weatherAnimationView.remove();
-                c.callback && c.callback()
-            })
-        },
-        onWeatherLoaded: function(a, c, b) {
-            var e = this;
-            e._iframe = a;
-            e.weather = c;
-            e.callback = b;
-            e.run = function() {
-                e._iframe.contentWindow.init && e._iframe.contentWindow.init();
-                $(e._iframe).animate({
-                    opacity: .5
-                },
-                400).animate({
-                    opacity: 1
-                },
-                400);
-                MyLocalStore.saveWeatherAnimation(e.weather);
-                $.isEmptyObject(e.callback) || e.callback()
-            }
-        },
-        initWeatherAnimation: function(e, c) {
-            if (a.isShowWeatherAnimationView(e)) {
-                var b = serverURI + "/front/animation/" + e,
-                g = document.createElement("iframe");
-                g.id = "weather-animation-view";
-                g.style.zIndex = -9;
-                g.style.opacity = 0;
-                var l = new a.onWeatherLoaded(g, e, c);
-                g.attachEvent ? g.attachEvent("onload",
-                function() {
-                    g.detachEvent("onload", null);
-                    l.run()
-                }) : g.onload = function() {
-                    g.onload = null;
-                    l.run()
-                };
-                $.isEmptyObject(a.weatherAnimationView) || a.weatherAnimationView.remove();
-                document.body.appendChild(g);
-                a.weatherAnimationView = $(g);
-                g.src = b
-            }
-        },
-        getWeather: function(e) {
-            $.ajax({
-                url: serverURI + "/front/animation/weather",
-                type: "get",
-                async: !0,
-                timeout: 0,
-                data: {
-                    _rd: (new Date).getTime()
-                },
-                dataType: "json",
-                success: function(c) {
-                    0 != c.success && (c = c.weather, $.isEmptyObject(c) || a.initWeatherAnimation(c, e))
-                }
-            })
-        }
-    });
-    f.MyAnimation = a
-})(window, void 0); (function(f, h) {
-    var a = {};
-    $.extend(!0, a, {
         switchBtnObj: function(a, c) {
             var b = this;
             b.view = a;
@@ -123,6 +49,7 @@
             if (!$.isEmptyObject(e)) return new a.switchBtnObj(e, c)
         }
     });
+    // 代理按钮的对象
     f.MyProxySwitchBtn = a
 })(window, void 0); (function(f, h) {
     var a = {};
@@ -159,10 +86,12 @@
             MyLoading.gifLoadingView.hide()
         }
     });
+    // 用于加载某些东西时的特效
     f.MyLoading = a
 })(window, void 0); (function(f, h) {
     var a = {};
     $.extend(!0, a, {
+        // 检查localStorage能不能用
         checkLocalStorage: function() {
             var a = f.localStorage;
             return a && (a.setItem("test", "123"), "123" == String(a.getItem("test"))) ? !0 : !1
@@ -214,18 +143,9 @@
         },
         getSearchType: function() {
             return a.getValue("SEARCH_TYPE")
-        },
-        saveWeatherAnimation: function(e) {
-            e = {
-                w: e,
-                lt: (new Date).getTime()
-            };
-            a.setValue("WEATHER_ANIMATION", _MyJS.Object.obj2string(e))
-        },
-        getWeatherAnimation: function() {
-            return a.getValue("WEATHER_ANIMATION")
         }
     });
+    // 用于一些信息的local存储
     f.MyLocalStore = a
 })(window, void 0);
 var searchEngineLogoBox = $(".search-engine .search-logo"),
@@ -793,6 +713,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         loadSiteClass: function(b) {
             for (var c = [], e, d, l, g, m = 0, k = b.length; m < k; m++) {
                 var n = b[m];
+                console.log(n);
                 $.isEmptyObject(n) || (e = a.pageSize, d = String(Number(c.length) / Number(e)), l = document.createElement("div"), g = "navi-btn-item site-class-item", l.id = "bg-navi-btn-" + n.id, l.title = n.className, 1 <= c.length / e && (l.style.display = "none"), 0 != m && -1 != d.indexOf(".") || m == b.length - 1 ? m == b.length - 1 || -1 == d.indexOf(".") || "8" == d.substr(d.indexOf(".") + 1, 1) ? (g += " navi-btn-item-end", "2" == d.substr(d.indexOf(".") + 1, 1) && m == b.length - 1 && (g += " navi-btn-item-one")) : g += " navi-btn-item-middle": g += " navi-btn-item-start", l.className = g, e = document.createElement("span"), e.innerHTML = n.className, l.appendChild(e), c.push(l))
             }
             a.classGroupBodyView.empty();
@@ -1219,11 +1140,9 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 MyLocalStore.saveNavBgId(c);
                 a.randBgs.splice(0, 1);
                 a.cutBGImging = !1;
-                MyAnimation.clearWeatherAnimation()
             };
             b.onerror = function() {
                 a.cutBGImging = !1;
-                MyAnimation.clearWeatherAnimation()
             };
             b.src = serverURI + "front/nav/bgimg/" + a.randBgs[0]
         },
@@ -1235,7 +1154,6 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 b.parent().addClass("current");
                 MyLocalStore.saveNavBgId(c);
                 a.cutBGImging = !1;
-                MyAnimation.clearWeatherAnimation();
                 setTimeout(function() {
                     MySetting.settingViewHide2()
                 },
@@ -1623,12 +1541,6 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                         1E3)
                     },
                     3E3);
-                    setTimeout(function() {
-                        try {
-                            // MyAnimation.getWeather()
-                        } catch(l) {}
-                    },
-                    5E3);
                     var c = !1;
                     $(f).scroll(function(a) {
                         c = 0 >= $(this).scrollTop() ? !0 : !1
@@ -1648,6 +1560,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 })
             })
         },
+        // 窗口调节时调节界面样式
         widowResize: function() {
             var a = $(f).height(),
             b = String(BGSetting.view.css("top") || "").replace("px", "");
@@ -1663,6 +1576,7 @@ $("body,html").animate({
     scrollTop: 0
 },
 0);
+// 窗口调节时调节界面样式
 $(window).on("resize",
 function() {
     MyApplication.widowResize()
@@ -1678,7 +1592,7 @@ $(function() {
     var f = MyLocalStore.getNavBgId();
     // if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) f = "105";
     if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) {
-        $.isEmptyObject(f) || $(document.body).css("background-image", "url('static/img/background.jpg')");
+        $.isEmptyObject(f) || $(document.body).css("background-image", "url('static/img/background.png')");
         setTimeout(function() {
                 MyApplication.init()
             },
