@@ -118,7 +118,7 @@
             "id": 2,
             "siteName": "CodeServer",
             "description": "CodeServer",
-            "siteUrl": "https://codeserver.musicoding.ml",
+            "siteUrl": "https://codeserver.musicoding.ml:2053",
             "logoResourceId": "images/Site/codeserver.png"
         }, {
             "id": 3,
