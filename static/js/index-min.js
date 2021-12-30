@@ -31,7 +31,7 @@
             };
             b.init = function() {
                 b.isChecked ? b.check() : b.uncheck();
-                b.callback && NavSite.siteListTypeChange(b.isChecked);
+                b.callback && b.callback(b.isChecked);
                 b.view.on("click mouseover mouseout",
                 function(a) {
                     if ("click" == a.type) {
@@ -1336,7 +1336,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             b.init = function() {
                 console.log("easul-init");
                 b.isChecked ? b.check() : b.uncheck();
-                b.callback && b.callback(b.isChecked);
+                b.callback && NavSite.siteListTypeChange(b.isChecked);
                 b.view.on("click mouseover mouseout",
                 function(a) {
                     if ("click" == a.type) {
