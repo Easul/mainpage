@@ -31,7 +31,7 @@
             };
             b.init = function() {
                 b.isChecked ? b.check() : b.uncheck();
-                b.callback && b.callback(b.isChecked);
+                b.callback && NavSite.siteListTypeChange(b.isChecked);
                 b.view.on("click mouseover mouseout",
                 function(a) {
                     if ("click" == a.type) {
@@ -620,8 +620,8 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             
             $.extend(!0, a, {
                 siteClasseMap: c,
-                siteListTypeChange: function(b) {
-                    a.initialised && a.siteListRotateX(a.siteClasseMap);
+                siteListTypeChange: function(b, c) {
+                    a.initialised && a.siteListRotateX(c);
                     // b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu && Search_Engine.change2Baidu(), a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google && Search_Engine.change2Google(), a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
                     b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
                 },
@@ -1336,7 +1336,6 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             b.init = function() {
                 console.log("easul-init");
                 b.isChecked ? b.check() : b.uncheck();
-                console.log("" + b.callback);
                 b.callback && b.callback(b.isChecked);
                 b.view.on("click mouseover mouseout",
                 function(a) {
