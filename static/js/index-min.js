@@ -617,7 +617,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         success: function(c) {
             // var siteClasses = c;
             // console.log(c);
-            MyLocalStore.getSiteListForm() == 0 ? (a.loadSiteClass(c.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(c.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
+            
             $.extend(!0, a, {
                 siteClasseMap: c,
                 siteListTypeChange: function(b, c) {
@@ -1334,6 +1334,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 b.textSwitch.html(b.textSwitch.attr("data-no"))
             };
             b.init = function() {
+                console.log("easul-init");
                 b.isChecked ? b.check() : b.uncheck();
                 b.callback && b.callback(b.isChecked);
                 b.view.on("click mouseover mouseout",
@@ -1519,10 +1520,12 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             function() {
                 Search_Engine.searchInputViewFocus_isSys = !0;
                 Search_Engine.searchInputView.focus();
+                console.log("easul-begin");
                 NavSite.siteListTypeSwitchBtn = MySwitchBtn.createSwitchBtn(NavSite.siteListTypeView, NavSite.siteListTypeChange);
                 var a = MyLocalStore.getSiteListForm();
                 $.isEmptyObject(__sys_t) ? 1 == a ? NavSite.siteListTypeSwitchBtn.setChecked(!1) : NavSite.siteListTypeSwitchBtn.setChecked(!0) : "i" == __sys_t ? NavSite.siteListTypeSwitchBtn.setChecked(!0) : NavSite.siteListTypeSwitchBtn.setChecked(!1);
                 NavSite.siteListTypeSwitchBtn.init();
+                console.log("easul-over");
                 NavSite.siteListProxySwitchBtn = MyProxySwitchBtn.createSwitchBtn(NavSite.siteListProxyView, NavSite.siteListProxyChange);
                 var a = MyLocalStore.getSiteProxyListForm();
                 $.isEmptyObject(__sys_t) ? 1 == a ? NavSite.siteListProxySwitchBtn.setChecked(!1) : NavSite.siteListProxySwitchBtn.setChecked(!0) : "i" == __sys_t ? NavSite.siteListProxySwitchBtn.setChecked(!0) : NavSite.siteListProxySwitchBtn.setChecked(!1);
