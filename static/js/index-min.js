@@ -617,14 +617,16 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         success: function(c) {
             // var siteClasses = c;
             // console.log(c);
-            
+            if (MyApplication.firstLoad == 1) {
+                MyLocalStore.getSiteListForm() == 1 ? (a.loadSiteClass(c.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(c.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
+            }
             $.extend(!0, a, {
                 siteClasseMap: c,
-                // siteListTypeChange: function(b, c) {
-                //     a.initialised && a.siteListRotateX(c);
-                //     // b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu && Search_Engine.change2Baidu(), a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google && Search_Engine.change2Google(), a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
-                //     b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
-                // },
+                siteListTypeChange: function(b, c) {
+                    a.initialised && a.siteListRotateX(c);
+                    // b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu && Search_Engine.change2Baidu(), a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google && Search_Engine.change2Google(), a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
+                    b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
+                },
                 siteListProxyChange: function(b, c) {
                     b ? MyLocalStore.saveSiteProxyListForm(0) : MyLocalStore.saveSiteProxyListForm(1);
                 }
@@ -672,12 +674,6 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 b && b();
                 a.initialised = !0
             })
-        },
-        siteListTypeChange: function(b, c) {
-            // 转移ajax下的函数到普通函数下
-            a.initialised && a.siteListRotateX(c);
-            // b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu && Search_Engine.change2Baidu(), a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google && Search_Engine.change2Google(), a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
-            b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
         },
         lockView: function() {
             a.locked = !0
@@ -1510,6 +1506,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
     e = $("#main");
     $.extend(!0, a, {
         view: e,
+        firstLoad: 0,
         init: function() {
             switch (MyLocalStore.getSearchType()) {
             case Search_Engine.types.google:
@@ -1528,7 +1525,9 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 NavSite.siteListTypeSwitchBtn = MySwitchBtn.createSwitchBtn(NavSite.siteListTypeView, NavSite.siteListTypeChange);
                 var a = MyLocalStore.getSiteListForm();
                 $.isEmptyObject(__sys_t) ? 1 == a ? NavSite.siteListTypeSwitchBtn.setChecked(!1) : NavSite.siteListTypeSwitchBtn.setChecked(!0) : "i" == __sys_t ? NavSite.siteListTypeSwitchBtn.setChecked(!0) : NavSite.siteListTypeSwitchBtn.setChecked(!1);
+                a.firstLoad = 1;
                 NavSite.siteListTypeSwitchBtn.init();
+                a.firstLoad = 0;
                 NavSite.siteListProxySwitchBtn = MyProxySwitchBtn.createSwitchBtn(NavSite.siteListProxyView, NavSite.siteListProxyChange);
                 var a = MyLocalStore.getSiteProxyListForm();
                 $.isEmptyObject(__sys_t) ? 1 == a ? NavSite.siteListProxySwitchBtn.setChecked(!1) : NavSite.siteListProxySwitchBtn.setChecked(!0) : "i" == __sys_t ? NavSite.siteListProxySwitchBtn.setChecked(!0) : NavSite.siteListProxySwitchBtn.setChecked(!1);
