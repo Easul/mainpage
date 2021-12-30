@@ -143,12 +143,6 @@
         },
         getSearchType: function() {
             return a.getValue("SEARCH_TYPE")
-        },
-        saveFirstLoad: function(e) {
-            a.setValue("FIRST_LOAD", e)
-        },
-        getFirstLoad: function() {
-            return a.getValue("FIRST_LOAD")
         }
     });
     // 用于一些信息的local存储
@@ -612,7 +606,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
     e = e.find("#web-site-body");
     var p = e.find(".web-group");
     $.ajax({
-        url: serverURI + "data/category.json",
+        url: "https://cdn.jsdelivr.net/gh/easul/mainpage/data/category.json",
         type: "get",
         async: !0,
         timeout: 0,
@@ -623,11 +617,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         success: function(c) {
             // var siteClasses = c;
             // console.log(c);
-            if (MyLocalStore.getFirstLoad() == 1) {
-                a.initialised && a.siteListRotateX(c);
-                MyLocalStore.getSiteListForm() == 1 ? (a.loadSiteClass(c.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0) : (a.loadSiteClass(c.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1)
-                MyLocalStore.saveFirstLoad(0);
-            }
+            
             $.extend(!0, a, {
                 siteClasseMap: c,
                 siteListTypeChange: function(b, c) {
@@ -1532,7 +1522,6 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 NavSite.siteListTypeSwitchBtn = MySwitchBtn.createSwitchBtn(NavSite.siteListTypeView, NavSite.siteListTypeChange);
                 var a = MyLocalStore.getSiteListForm();
                 $.isEmptyObject(__sys_t) ? 1 == a ? NavSite.siteListTypeSwitchBtn.setChecked(!1) : NavSite.siteListTypeSwitchBtn.setChecked(!0) : "i" == __sys_t ? NavSite.siteListTypeSwitchBtn.setChecked(!0) : NavSite.siteListTypeSwitchBtn.setChecked(!1);
-                MyLocalStore.saveFirstLoad(1);
                 NavSite.siteListTypeSwitchBtn.init();
                 NavSite.siteListProxySwitchBtn = MyProxySwitchBtn.createSwitchBtn(NavSite.siteListProxyView, NavSite.siteListProxyChange);
                 var a = MyLocalStore.getSiteProxyListForm();
