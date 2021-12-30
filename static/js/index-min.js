@@ -617,7 +617,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         success: function(c) {
             // var siteClasses = c;
             // console.log(c);
-            b ? (a.loadSiteClass(c.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(c.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
+            MyLocalStore.getSiteListForm() == 0 ? (a.loadSiteClass(c.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(c.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
             $.extend(!0, a, {
                 siteClasseMap: c,
                 siteListTypeChange: function(b, c) {
