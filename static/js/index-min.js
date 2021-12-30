@@ -1336,7 +1336,8 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             b.init = function() {
                 console.log("easul-init");
                 b.isChecked ? b.check() : b.uncheck();
-                b.callback && b.callback(b.isChecked);
+                console.log(b.callback);
+                b.callback(b.isChecked);
                 b.view.on("click mouseover mouseout",
                 function(a) {
                     if ("click" == a.type) {
@@ -1520,12 +1521,10 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             function() {
                 Search_Engine.searchInputViewFocus_isSys = !0;
                 Search_Engine.searchInputView.focus();
-                console.log("easul-begin");
                 NavSite.siteListTypeSwitchBtn = MySwitchBtn.createSwitchBtn(NavSite.siteListTypeView, NavSite.siteListTypeChange);
                 var a = MyLocalStore.getSiteListForm();
                 $.isEmptyObject(__sys_t) ? 1 == a ? NavSite.siteListTypeSwitchBtn.setChecked(!1) : NavSite.siteListTypeSwitchBtn.setChecked(!0) : "i" == __sys_t ? NavSite.siteListTypeSwitchBtn.setChecked(!0) : NavSite.siteListTypeSwitchBtn.setChecked(!1);
                 NavSite.siteListTypeSwitchBtn.init();
-                console.log("easul-over");
                 NavSite.siteListProxySwitchBtn = MyProxySwitchBtn.createSwitchBtn(NavSite.siteListProxyView, NavSite.siteListProxyChange);
                 var a = MyLocalStore.getSiteProxyListForm();
                 $.isEmptyObject(__sys_t) ? 1 == a ? NavSite.siteListProxySwitchBtn.setChecked(!1) : NavSite.siteListProxySwitchBtn.setChecked(!0) : "i" == __sys_t ? NavSite.siteListProxySwitchBtn.setChecked(!0) : NavSite.siteListProxySwitchBtn.setChecked(!1);
