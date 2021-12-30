@@ -618,6 +618,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         success: function(c) {
             // var siteClasses = c;
             // console.log(c);
+            console.log(3);
             $.extend(!0, a, {
                 siteClasseMap: c,
                 siteListTypeChange: function(b, c) {
