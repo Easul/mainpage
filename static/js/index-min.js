@@ -605,32 +605,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
     k = b.find("#site-class-group-right-btn");
     e = e.find("#web-site-body");
     var p = e.find(".web-group");
-    $.ajax({
-        url: "https://cdn.jsdelivr.net/gh/easul/mainpage/data/category.json",
-        type: "get",
-        async: !0,
-        timeout: 0,
-        data: {
-            _rd: (new Date).getTime()
-        },
-        dataType: "json",
-        success: function(c) {
-            // var siteClasses = c;
-            // console.log(c);
-            
-            $.extend(!0, a, {
-                siteClasseMap: c,
-                siteListTypeChange: function(b, c) {
-                    a.initialised && a.siteListRotateX(c);
-                    // b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu && Search_Engine.change2Baidu(), a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google && Search_Engine.change2Google(), a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
-                    b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
-                },
-                siteListProxyChange: function(b, c) {
-                    b ? MyLocalStore.saveSiteProxyListForm(0) : MyLocalStore.saveSiteProxyListForm(1);
-                }
-            })
-        }
-    });
+    
     $.extend(!0, a, {
         view: $("#web-site"),
         webSiteHeader: c,
@@ -657,6 +632,116 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         siteClasses: [],
         locked: !1,
         visible: !1,
+        siteClasseMap: {
+            "innerClasses": [
+                {
+                "id": "0",
+                "className": "\u6211\u7684"
+                },
+                {
+                "id": "1",
+                "className": "\u5e38\u7528"
+                },
+                {
+                "id": "2",
+                "className": "\u7537\u751f"
+                },
+                {
+                "id": "3",
+                "className": "\u5973\u751f"
+                },
+                {
+                "id": "4",
+                "className": "\u751f\u6d3b"
+                },
+                {
+                "id": "5",
+                "className": "\u8bbe\u8ba1"
+                },
+                {
+                "id": "6",
+                "className": "\u4ea7\u54c1"
+                },
+                {
+                "id": "7",
+                "className": "\u804c\u80fd"
+                },
+                {
+                "id": "8",
+                "className": "\u8fd0\u8425"
+                },
+                {
+                "id": "9",
+                "className": "\u521b\u4e1a"
+                },
+                {
+                "id": "10",
+                "className": "Android"
+                },
+                {
+                "id": "11",
+                "className": "IOS"
+                },
+                {
+                "id": "12",
+                "className": "JavaWeb"
+                },
+                {
+                "id": "13",
+                "className": "\u8da3\u5473"
+                }
+            ],
+            "outerClasses": [
+                {
+                "id": "14",
+                "className": "\u5e38\u7528"
+                },
+                {
+                "id": "15",
+                "className": "\u77e5\u8bc6"
+                },
+                {
+                "id": "16",
+                "className": "\u5546\u4e1a"
+                },
+                {
+                "id": "17",
+                "className": "\u79d1\u6280"
+                },
+                {
+                "id": "18",
+                "className": "\u6e2f\u53f0"
+                },
+                {
+                "id": "19",
+                "className": "\u540d\u54c1"
+                },
+                {
+                "id": "20",
+                "className": "\u673a\u6784"
+                },
+                {
+                "id": "21",
+                "className": "\u5927\u5b66"
+                },
+                {
+                "id": "22",
+                "className": "\u519b\u4e8b"
+                },
+                {
+                "id": "23",
+                "className": "\u8da3\u5473"
+                }
+            ]
+        },
+        siteListTypeChange: function(b, c) {
+            a.initialised && a.siteListRotateX(c);
+            // b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu && Search_Engine.change2Baidu(), a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google && Search_Engine.change2Google(), a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
+            b ? (a.loadSiteClass(a.siteClasseMap.innerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.baidu , a.siteListForm = 0, MyLocalStore.saveSiteListForm(0)) : (a.loadSiteClass(a.siteClasseMap.outerClasses), a.initialised && Search_Engine.search_type != Search_Engine.types.google, a.siteListForm = 1, MyLocalStore.saveSiteListForm(1))
+        },
+        siteListProxyChange: function(b, c) {
+            b ? MyLocalStore.saveSiteProxyListForm(0) : MyLocalStore.saveSiteProxyListForm(1);
+        },
         initView: function(b) {
             a.lockView();
             var c = a.view;
