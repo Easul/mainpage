@@ -135,6 +135,11 @@
             "siteName": "Codeserver",
             "siteUrl": "https://codeserver.lightly.ml/",
             "logoResourceId": "images/Site/codeserver.png"
+        }, {
+            "id": 6,
+            "siteName": "Easul的小博客",
+            "siteUrl": "https://blog.lightly.ml/",
+            "logoResourceId": "images/Site/easul-blog.png"
         }]
     }]
 }
