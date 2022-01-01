@@ -1247,7 +1247,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         },
         applyBGImg: function(a, b) {
             // $(document.body).css("background-image", "url('images/BackGround/image/" + a + ".png')"),
-            $(document.body).css("background-image", "url('https://aboive.gitee.io/img/20220101" + a + ".png')"),
+            $(document.body).css("background-image", "url('https://aboive.gitee.io/picgo/img/20220101" + a + ".png')"),
             $(document.getElementById("bg-iframe")).remove();
             b && b();
         },
@@ -1678,7 +1678,8 @@ $(function() {
     var f = MyLocalStore.getNavBgId();
     // if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) f = "105";
     if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) {
-        $.isEmptyObject(f) || $(document.body).css("background-image", "url('static/img/background.png')");
+        // $.isEmptyObject(f) || $(document.body).css("background-image", "url('static/img/background.png')");
+        $.isEmptyObject(f) || $(document.body).css("background-image", "url('https://aboive.gitee.io/picgo/img/202201011.png')");
         setTimeout(function() {
                 MyApplication.init()
             },
