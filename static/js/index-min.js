@@ -1246,7 +1246,8 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
             }))
         },
         applyBGImg: function(a, b) {
-            $(document.body).css("background-image", "url('images/BackGround/image/" + a + ".png')"),
+            // $(document.body).css("background-image", "url('images/BackGround/image/" + a + ".png')"),
+            $(document.body).css("background-image", "url('https://aboive.gitee.io/img/20220101" + a + ".png')"),
             $(document.getElementById("bg-iframe")).remove();
             b && b();
         },
