@@ -116,7 +116,7 @@
             "logoResourceId": "images/Site/cloudstudio.png"
         },{
             "id": 2,
-            "siteName": "CodeServer",
+            "siteName": "CodeServer3",
             "description": "CodeServer",
             "siteUrl": "https://codeserver.musicoding.ml:2053",
             "logoResourceId": "images/Site/codeserver.png"
@@ -132,7 +132,7 @@
             "logoResourceId": "images/Site/csdn.png"
         }, {
             "id": 5,
-            "siteName": "Codeserver",
+            "siteName": "CodeserverI",
             "siteUrl": "https://codeserver.lightly.ml/",
             "logoResourceId": "images/Site/codeserver.png"
         }, {
