@@ -65,9 +65,9 @@
             "logoResourceId": "images/Site/motrix.png"
         }, {
             "id": 6,
-            "siteName": "kinhdown",
-            "siteUrl": "https://kinhdown.com/",
-            "logoResourceId": "images/Site/kinhdown.png"
+            "siteName": "\u6570\u7801\u5c0f\u7ad9",
+            "siteUrl": "https://pan.shuma.ink/",
+            "logoResourceId": "images/Site/baiduyun.png"
         }]
     },{
         "id": 3,
@@ -100,7 +100,7 @@
             "logoResourceId": "images/Site/baidufanyi.png"
         }, {
             "id": 6,
-            "siteName": "IP查询",
+            "siteName": "IP\u67e5\u8be2",
             "siteUrl": "https://ipaddress.com/",
             "logoResourceId": "images/Site/ipaddress.png"
         }]
@@ -137,7 +137,7 @@
             "logoResourceId": "images/Site/codeserver.png"
         }, {
             "id": 6,
-            "siteName": "Easul的小博客",
+            "siteName": "Easul\u7684\u5c0f\u535a\u5ba2",
             "siteUrl": "https://blog.lightly.ml/",
             "logoResourceId": "images/Site/easul-blog.png"
         }]
