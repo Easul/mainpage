@@ -141,5 +141,22 @@
             "siteUrl": "https://blog.lightly.ml/",
             "logoResourceId": "images/Site/easul-blog.png"
         }]
+    }, {
+        "id": 5,
+        "className": "\u4ee3\u7406",
+        "description": "\u4ee3\u7406",
+        "siteVos": [{
+            "id": 1,
+            "siteName": "github",
+            "description": "github\u955c\u50cf\u4ee3\u7406",
+            "siteUrl": "https://github.lightly.ml/",
+            "logoResourceId": "images/Site/github.png"
+        },{
+            "id": 2,
+            "siteName": "\u7ef4\u57fa\u767e\u79d1",
+            "description": "\u7ef4\u57fa\u767e\u79d1\u955c\u50cf\u4ee3\u7406",
+            "siteUrl": "https://wiki.lightly.ml/",
+            "logoResourceId": "images/Site/wikipedia.png"
+        }]
     }]
 }
