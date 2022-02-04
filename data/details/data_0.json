@@ -157,6 +157,12 @@
             "description": "\u7ef4\u57fa\u767e\u79d1\u955c\u50cf\u4ee3\u7406",
             "siteUrl": "https://wiki.lightly.ml/",
             "logoResourceId": "images/Site/wikipedia.png"
+        },{
+            "id": 3,
+            "siteName": "google",
+            "description": "google\u955c\u50cf\u4ee3\u7406",
+            "siteUrl": "https://goo.lightly.ml/",
+            "logoResourceId": "images/Site/google.png"
         }]
     }]
 }
