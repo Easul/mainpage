@@ -163,6 +163,12 @@
             "description": "google\u955c\u50cf\u4ee3\u7406",
             "siteUrl": "https://goo.lightly.ml/",
             "logoResourceId": "images/Site/google.png"
+        },{
+            "id": 3,
+            "siteName": "onedrive",
+            "description": "onedrive list",
+            "siteUrl": "https://onedrive.lightly.ml/",
+            "logoResourceId": "images/Site/onedrive.png"
         }]
     }]
 }
