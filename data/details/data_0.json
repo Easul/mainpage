@@ -169,6 +169,12 @@
             "description": "onedrive list",
             "siteUrl": "https://onedrive.lightly.ml/",
             "logoResourceId": "images/Site/onedrive.png"
+        },{
+            "id": 4,
+            "siteName": "web proxy",
+            "description": "web proxy",
+            "siteUrl": "https://proxy.lightly.ml/",
+            "logoResourceId": "images/Site/webproxy.png"
         }]
     }]
 }
