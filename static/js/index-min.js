@@ -234,6 +234,9 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 if (r) {
                     b = a.google_search_hint_url;
                     a.get_google_search_hint_list(b, d, "firefox")
+                } else {
+                    b = "https://proxy.lightly.ml/-----https://gooproxy.vercel.app/complete/search";
+                    a.get_google_search_hint_list(b, d, "firefox")
                 }
             }
         },
@@ -564,7 +567,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                 if (r) {
                     a.google_search_url = 'https://www.google.com/search';
                 } else {
-                    a.google_search_url = 'https://pro.jsproxy.cyou/-----https://duckduckgo.com/'
+                    a.google_search_url = 'https://proxy.lightly.ml/-----https://gooproxy.vercel.app/search'
                 }
                 b == a.types.baidu ? (c = a.baidu_search_url, e = "wd") : b == a.types.google && (c = a.google_search_url);
                 a.isMetaSearch && b != a.types.google ? (d = a.metaSearchUrl + "?q=" + encodeURIComponent(d) + "&t=" + b, f.location.href = d) : (f.open(c + "?" + e + "=" + d), a.searchInputViewBlur())
