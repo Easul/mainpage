@@ -235,7 +235,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                     b = a.google_search_hint_url;
                     a.get_google_search_hint_list(b, d, "firefox")
                 } else {
-                    b = "https://proxy.lightly.ml/-----https://gooproxy.vercel.app/complete/search";
+                    b = "https://gooproxy.vercel.app/complete/search";
                     a.get_google_search_hint_list(b, d, "firefox")
                 }
             }
