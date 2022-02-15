@@ -1250,7 +1250,14 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
         },
         applyBGImg: function(a, b) {
             // $(document.body).css("background-image", "url('images/BackGround/image/" + a + ".png')"),
-            $(document.body).css("background-image", "url('https://aboive.gitee.io/picgo/img/20220101" + a + ".png')"),
+            var bgimage = [
+                "图片",
+                "t021fa05ec81aedf3bd",
+                "t028b0e1cf2f0231514",
+                "t021895488c328f13ee",
+                "t0255b34625a45e8d16"
+            ];
+            $(document.body).css("background-image", "url('https://ps.ssl.qhmsg.com/" + bgimage[parseInt(a)] + ".jpg')"),
             $(document.getElementById("bg-iframe")).remove();
             b && b();
         },
@@ -1682,7 +1689,7 @@ $(function() {
     // if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) f = "105";
     if ($.isEmptyObject(f) || "null" == String(f) || "undefined" == String(f)) {
         // $.isEmptyObject(f) || $(document.body).css("background-image", "url('static/img/background.png')");
-        $.isEmptyObject(f) || $(document.body).css("background-image", "url('https://aboive.gitee.io/picgo/img/202201011.png')");
+        $.isEmptyObject(f) || $(document.body).css("background-image", "url('https://ps.ssl.qhmsg.com/t021fa05ec81aedf3bd.jpg')");
         setTimeout(function() {
                 MyApplication.init()
             },
