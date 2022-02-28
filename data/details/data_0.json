@@ -171,6 +171,12 @@
             "logoResourceId": "images/Site/onedrive.png"
         },{
             "id": 4,
+            "siteName": "apache",
+            "description": "apache proxy",
+            "siteUrl": "https://apache.lightly.ml/",
+            "logoResourceId": "images/Site/apache.png"
+        },{
+            "id": 5,
             "siteName": "web proxy",
             "description": "web proxy",
             "siteUrl": "https://proxy.lightly.ml/",
