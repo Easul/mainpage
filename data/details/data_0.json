@@ -15,9 +15,10 @@
             "logoResourceId": "images/Site/ps.png"
         }, {
             "id": 3,
-            "siteName": "\u963f\u91cc\u6302\u8f7d",
-            "siteUrl": "https://sfy.musicoding.ml/",
-            "logoResourceId": "images/Site/aliyun.png"
+            "siteName": "onedrive",
+            "description": "onedrive list",
+            "siteUrl": "https://onedrive.lightly.ml/",
+            "logoResourceId": "images/Site/onedrive.png"
         }, {
             "id": 4,
             "siteName": "\u7f16\u7a0b\u603b\u7ed3",
@@ -116,14 +117,14 @@
             "logoResourceId": "images/Site/cloudstudio.png"
         },{
             "id": 2,
-            "siteName": "CodeServer3",
+            "siteName": "CodeServerE",
             "description": "CodeServer",
-            "siteUrl": "https://codeserver.musicoding.ml:2053",
+            "siteUrl": "https://haxweb.lightly.ml:8443",
             "logoResourceId": "images/Site/codeserver.png"
         }, {
             "id": 3,
             "siteName": "WebSSH",
-            "siteUrl": "https://webssh.musicoding.ml",
+            "siteUrl": "https://euserv44.lightly.ml:2053",
             "logoResourceId": "images/Site/ssh.png"
         }, {
             "id": 4,
@@ -163,12 +164,6 @@
             "description": "google\u955c\u50cf\u4ee3\u7406",
             "siteUrl": "https://goo.lightly.ml/",
             "logoResourceId": "images/Site/google.png"
-        },{
-            "id": 3,
-            "siteName": "onedrive",
-            "description": "onedrive list",
-            "siteUrl": "https://onedrive.lightly.ml/",
-            "logoResourceId": "images/Site/onedrive.png"
         },{
             "id": 4,
             "siteName": "apache",
