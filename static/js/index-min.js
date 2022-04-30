@@ -831,7 +831,7 @@ searchEngineLogoPath = staticServerURI + "img/"; (function(f, h) {
                             str += "<div class='web-group-head'> <span class='title-font'>" + b.dataResult[i].className + "</span> </div>";
                             str += "<div class=\"web-group-item web-group-item-head\"></div>";
                             for(var j=0; j<b.dataResult[i].siteVos.length;j++) {
-                                str += "<a class='web-group-item' target='_blank' href=" + b.dataResult[i].siteVos[j].siteUrl + " title=" +  b.dataResult[i].siteVos[j].siteDesc + ">"
+                                str += "<a class='web-group-item' target='_blank' href=" + b.dataResult[i].siteVos[j].siteUrl + " title=" +  b.dataResult[i].siteVos[j].description + ">"
                                 + "<div class='web-group-icon' style='background-image: url(" + b.dataResult[i].siteVos[j].logoResourceId + ");'></div>"
                                 + "<span class='web-group-name'>" + b.dataResult[i].siteVos[j].siteName + "</span> </a>";
                             }
