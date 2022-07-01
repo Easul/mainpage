@@ -204,5 +204,22 @@
             "siteUrl": "https://onedrive.lightly.ml/",
             "logoResourceId": "images/Site/onedrive.png"
         }]
+    }, {
+        "id": 6,
+        "className": "\u5e38\u7528\u5de5\u5177",
+        "description": "\u5e38\u7528\u5de5\u5177",
+        "siteVos": [{
+            "id": 1,
+            "siteName": "\u5728\u7ebf\u526a\u8d34\u677f",
+            "description": "\u65b9\u4fbf\u6587\u672c\u4f20\u8f93",
+            "siteUrl": "https://netcut.lightly.ml/",
+            "logoResourceId": "images/Site/netcut.png"
+        },{
+            "id": 2,
+            "siteName": "\u5728\u7ebf\u0070\u006f\u0073\u0074\u006d\u0061\u006e",
+            "description": "\u9700\u5c06\u57df\u540d\u6dfb\u52a0\u8fdb\u63d2\u4ef6",
+            "siteUrl": "https://postwoman.lightly.ml/",
+            "logoResourceId": "images/Site/postwoman.png"
+        }]
     }]
 }
